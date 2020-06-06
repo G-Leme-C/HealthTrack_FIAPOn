@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <canvas id="chart-area" style="display: block; width: 158px; height: 79px;" width="158" height="79" class="chartjs-render-monitor">
+    </canvas>
+
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script>
+        var randomScalingFactor = function() {
+			return Math.round(Math.random() * 100);
+		};
+
+		var config = {
+			type: 'doughnut',
+			data: {
+				datasets: [{
+					data: [
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+					],
+					backgroundColor: [
+                        'rgb(255, 99, 132)',
+	                    'rgb(255, 159, 64)',
+	                    'rgb(255, 205, 86)',
+	                    'rgb(75, 192, 192)',
+	                    'rgb(54, 162, 235)',
+	                    'rgb(153, 102, 255)',
+	                    'rgb(201, 203, 207)'
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					'Red',
+					'Orange',
+					'Yellow',
+					'Green',
+					'Blue'
+				]
+			},
+			options: {
+				responsive: true,
+				legend: {
+					position: 'top',
+				},
+				title: {
+					display: true,
+					text: 'Chart.js Doughnut Chart'
+				},
+				animation: {
+					animateScale: true,
+					animateRotate: true
+				}
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('chart-area').getContext('2d');
+			window.myDoughnut = new Chart(ctx, config);
+		};
+
+    </script>
+</html>
