@@ -59,3 +59,11 @@
 .icon-size-2 {
     width: 2rem;
 }
+
+.border-purple {
+    border-color: #683696;
+}
+
+.w-05x {
+    width: 50%;
+}
