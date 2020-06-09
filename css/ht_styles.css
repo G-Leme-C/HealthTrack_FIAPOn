@@ -3,6 +3,10 @@
     color:#683696;
 }
 
+.body-bg-ht {
+    background-image: url(../img/race.png);
+}
+
 .btn-purple-ht {
     background-color: #683696;
     color: whitesmoke;
